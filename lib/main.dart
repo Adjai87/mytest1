@@ -4,8 +4,10 @@ import 'package:mytest/screens/Container.dart';
 import 'package:mytest/screens/ContainerStyling.dart';
 import 'package:mytest/screens/FormDecoration.dart';
 import 'package:mytest/screens/FormTextField.dart';
+import 'package:mytest/screens/HttpRequestScreen.dart';
 import 'package:mytest/screens/ImagesScreen.dart';
 import 'package:mytest/screens/JsonScreen.dart';
+import 'package:mytest/screens/ProductScreen.dart';
 import 'package:mytest/screens/RowsScreen.dart';
 import 'package:mytest/screens/TextstylingScreen.dart';
 import 'package:mytest/screens/ToastScreen.dart';
@@ -54,6 +56,46 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: [
+               ListTile(
+
+            title: Text("Products "),
+            leading: Icon(Icons.add_shopping_cart),
+            trailing:  Icon(Icons.chevron_right),
+            subtitle: Text("List of Products"),
+
+            onTap: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context)=>const ProductScreen(title: '',),
+                  ),
+                  );
+                   },
+
+
+          ),
+
+          ListTile(
+
+            title: Text("Http Request"),
+            leading: Icon(Icons.http),
+            trailing:  Icon(Icons.chevron_right),
+            subtitle: Text("Internet communications"),
+
+            onTap: () {
+              Navigator.push(
+                context, 
+                MaterialPageRoute(
+                  builder: (context)=>const HttpRequestScreen(title: '',),
+                  ),
+                  );
+                   },
+
+
+          ),
+
+
+
           ListTile(
 
             title: Text("Collumns"),
